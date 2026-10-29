@@ -16,3 +16,8 @@ class UserResponse(BaseModel):
     full_name: str
     is_active: bool
     is_admin: bool
+
+
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str = Field(min_length=1, max_length=128)
